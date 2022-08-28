@@ -16,7 +16,7 @@ Runs only the [compile stage](https://github.com/marcel-last/go-multi-arch-build
 $ make compile
 ```
 
-Verify artifacts/binaries have been created:\
+Verify artifacts/binaries have been created:
 ```bash
 $ file bin/*/* 
 bin/darwin/hello-v0.0.1-amd64:      Mach-O 64-bit x86_64 executable
