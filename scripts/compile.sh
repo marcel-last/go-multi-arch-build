@@ -16,7 +16,7 @@ for os in "${GOOS[@]}"; do
         binary_name=$MODULE_NAME-v$MODULE_VERSION-$arch
         if [ $os == "windows" ]; then
             GOOS=$os GOARCH=$arch go build -o bin/$os/$binary_name.exe $MODULE_SOURCE
-        # Go version 1.15 drops support for 32-bit binaries; darwin/386 and darwin/arm (https://go.dev/doc/go1.15)
+        # Go version 1.15 drops support for darwin 32-bit binaries (darwin/386 and darwin/arm) [https://go.dev/doc/go1.15]
         # Skip this operating system/architecture combination.
         elif [ $os == "darwin" ] && [ $arch == "386" ]; then 
             continue
