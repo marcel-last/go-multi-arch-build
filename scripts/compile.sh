@@ -17,7 +17,7 @@ for os in "${GOOS[@]}"; do
         artifact_name=$MODULE_NAME-v$MODULE_VERSION-$arch
         if [ $os == "windows" ]; then
             GOOS=$os GOARCH=$arch go build -o $artifact_output_dir/$artifact_name.exe $MODULE_SOURCE
-        # Go version 1.15 drops support for darwin 32-bit binaries (darwin/386 and darwin/arm) [https://go.dev/doc/go1.15]
+        # Go version 1.15 drops support for 32-bit darwin binaries (darwin/386 and darwin/arm) [https://go.dev/doc/go1.15]
         # Skip this operating system/architecture combination.
         elif [ $os == "darwin" ] && [ $arch == "386" ]; then 
             continue
