@@ -11,7 +11,7 @@ Runs all stages/modules defined in [Makefile](Makefile):
 make
 ```
 
-Runs the compile stage defined in [Makefile](Makefile)
+Runs only the [[](compile stage)](https://github.com/marcel-last/go-multi-arch-build/blob/6d7c59308b7fef73355e246c165e443358a5ae1e/Makefile#L12-L15) defined in [Makefile](Makefile):
 ```bash
 make compile
 ```
