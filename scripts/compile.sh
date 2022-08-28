@@ -21,7 +21,7 @@ for os in "${GOOS[@]}"; do
         elif [ $os == "darwin" ] && [ $arch == "386" ]; then 
             continue
         else
-		    GOOS=$os GOARCH=$arch go build -o bin/$os/$binary_name $MODULE_SOURCE
+	    GOOS=$os GOARCH=$arch go build -o bin/$os/$binary_name $MODULE_SOURCE
         fi
 	done
 done
