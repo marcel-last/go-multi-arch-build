@@ -8,12 +8,12 @@ Execute one of the below commands to build and compile the Go module binary arti
 
 Runs all stages/modules defined in [Makefile](Makefile):
 ```bash
-make
+$ make
 ```
 
 Runs only the [compile stage](https://github.com/marcel-last/go-multi-arch-build/blob/6d7c59308b7fef73355e246c165e443358a5ae1e/Makefile#L12-L15) defined in [Makefile](Makefile) which executes [scripts/compile.sh](scripts/compile.sh):
 ```bash
-make compile
+$ make compile
 ```
 
 Verify artifacts/binaries have been created:\
