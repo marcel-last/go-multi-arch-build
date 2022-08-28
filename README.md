@@ -1,6 +1,7 @@
 # go-multi-arch-build
-A proof-of-concept/example for a "multi-os/architecture" artifact compilation and build for a simple Go application.
+A proof-of-concept/example for a "multi-os/architecture" artifact compilation and build for a simple Go application. Ideal as a base for a CICD build script to genreate build artifacts for a Go based applications that support multiple operating systems and architecture combinations.
 
+## Notes
 The Makefile in this project ensure that `MODULE_NAME` and `MODULE_VERSION` environment variables are set to be passed into [scripts/compile.sh](scripts/compile.sh). Change these as needed with your Go module/application.
 
 ## How to use
