@@ -12,7 +12,7 @@ GOARCH=(386 amd64 arm64)
 MODULE_SOURCE=$MODULE_NAME.go
 
 for os in "${GOOS[@]}"; do
-	for arch in "${GOARCH[@]}"; do
+    for arch in "${GOARCH[@]}"; do
         binary_name=$MODULE_NAME-v$MODULE_VERSION-$arch
         if [ $os == "windows" ]; then
             GOOS=$os GOARCH=$arch go build -o bin/$os/$binary_name.exe $MODULE_SOURCE
@@ -23,5 +23,5 @@ for os in "${GOOS[@]}"; do
         else
 	    GOOS=$os GOARCH=$arch go build -o bin/$os/$binary_name $MODULE_SOURCE
         fi
-	done
+    done
 done
