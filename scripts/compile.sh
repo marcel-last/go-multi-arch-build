@@ -8,7 +8,7 @@
 set -euxo pipefail
 
 GOOS=(windows darwin linux)
-GOARCH=(386 amd64 arm64)
+GOARCH=(386 amd64 arm arm64)
 MODULE_SOURCE=$MODULE_NAME.go
 
 for os in "${GOOS[@]}"; do
@@ -19,7 +19,7 @@ for os in "${GOOS[@]}"; do
             artifact_name=$artifact_name.exe
         # Go version 1.15 drops support for 32-bit darwin binaries (darwin/386 and darwin/arm) [https://go.dev/doc/go1.15]
         # Skip this operating system/architecture combination.
-        elif [ $os == "darwin" ] && [ $arch == "386" ]; then 
+        elif [ $os == "darwin" ] && ([ $arch == "386" ] || [ $arch == "arm" ]); then 
             continue
         fi
         GOOS=$os GOARCH=$arch go build -o $artifact_output_dir/$artifact_name $MODULE_SOURCE
