@@ -20,12 +20,16 @@ $ make compile
 Verify artifacts/binaries have been created:
 ```bash
 $ file bin/*/* 
+Verifying build artifacts:
+file bin/*/*
 bin/darwin/hello-v0.0.1-amd64:      Mach-O 64-bit x86_64 executable
 bin/darwin/hello-v0.0.1-arm64:      Mach-O 64-bit arm64 executable, flags:<|DYLDLINK|PIE>
-bin/linux/hello-v0.0.1-i386:         ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, Go BuildID=N2l4UE2eVN__K03scAzI/1NCbXdThK813v2wU6nSY/Z5ETNFYeGz-IX3MSoGH0/wnQ1nUYXL0tZ4A0j34Ey, with debug_info, not stripped
-bin/linux/hello-v0.0.1-amd64:       ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, Go BuildID=9cthHeSzqLdCFGkX5jEV/xbNMwissW-LouKxw99N-/mmDZUJ_DpCXZ9DXMquoQ/7tVH4bUeVNVRBHIJNy_E, with debug_info, not stripped
-bin/linux/hello-v0.0.1-arm64:       ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), statically linked, Go BuildID=3Pz2abLk7pECZkqIeC0X/rn7iZ7v0Q2-K1TF_Cfqc/SZv3LKiOjJlsGnNiFdqH/OTHLGFgNUNEDbrhGeu6J, with debug_info, not stripped
-bin/windows/hello-v0.0.1-i386.exe:   PE32 executable (console) Intel 80386 (stripped to external PDB), for MS Windows
+bin/linux/hello-v0.0.1-386:         ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, Go BuildID=Qf_Tt99dKInEdXmugM8y/rGjQ2Q486sxqOUHFwOOi/kvIdZKCr1nAI7JsMX3uT/GHp0qYeEdtE3eHjtUk4X, with debug_info, not stripped
+bin/linux/hello-v0.0.1-amd64:       ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, Go BuildID=UwrnJtdvJJn93UFTCy2h/Ks3YUgY06MHYldy9ShEW/UhtJNaq2JG_7qedtD82z/tt_dm6rqFzveYsfv7Sni, with debug_info, not stripped
+bin/linux/hello-v0.0.1-arm:         ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, Go BuildID=BvJesFZkGyAqKJneRRu2/r5X3N-fl927BRxroNBd5/K6QaAKMhGDECc6A-zV30/XxBmrugDA47pSaX3F6vp, with debug_info, not stripped
+bin/linux/hello-v0.0.1-arm64:       ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), statically linked, Go BuildID=eHUNcDtDl_WK990Zfw2p/-onpUZc11zzN_uSDYF75/A5ILVM9zipd7KXH1Kn1Q/S2O_qN_MsmQgRZAbOh0j, with debug_info, not stripped
+bin/windows/hello-v0.0.1-386.exe:   PE32 executable (console) Intel 80386 (stripped to external PDB), for MS Windows
 bin/windows/hello-v0.0.1-amd64.exe: PE32+ executable (console) x86-64 (stripped to external PDB), for MS Windows
 bin/windows/hello-v0.0.1-arm64.exe: PE32+ executable (console) Aarch64 (stripped to external PDB), for MS Windows
+bin/windows/hello-v0.0.1-arm.exe:   PE32 executable (console) ARMv7 Thumb (stripped to external PDB), for MS Windows
 ```
